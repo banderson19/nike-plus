@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const sequelize = require('../../config/connection');
+const { Post, User, Attend } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -56,6 +57,17 @@ router.post('/', (req, res) => {
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
+        });
+});
+
+// PUT /api/posts/upattend
+router.put('/upattend', (req, res) => {
+    // custom static method created in models/Post.js
+    Post.upattend(req.body, { Attend })
+        .then(updatedPostData => res.json(updatedPostData))
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
         });
 });
 
