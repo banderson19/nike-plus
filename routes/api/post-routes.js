@@ -5,7 +5,13 @@ const { Post, User, Attend } = require('../../models');
 // get all users
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: ['id', 'post_content', 'title', 'created_at'],
+        attributes: [
+            'id', 
+            'post_content', 
+            'title', 
+            'created_at'
+            [sequelize.literal('(SELECT COUNT(*) FROM attend WHERE post.id = attend.post_id)'), 'attend_count']
+        ],
         order: [['created_at', 'DESC']],
         include: [
             {
@@ -26,7 +32,13 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'post_content', 'title', 'created_at'],
+        attributes: [
+            'id', 
+            'post_content', 
+            'title', 
+            'created_at'
+            [sequelize.literal('(SELECT COUNT(*) FROM attend WHERE post.id = attend.post_id)'), 'attend_count']
+        ],
         include: [
             {
                 model: User,
