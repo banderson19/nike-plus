@@ -9,16 +9,17 @@ router.get('/', (req, res) => {
             'id', 
             'post_content', 
             'title', 
-            'created_at'
+            'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM attend WHERE post.id = attend.post_id)'), 'attend_count']
         ],
         order: [['created_at', 'DESC']],
-        include: [
+        include:
+        [
             {
-                model: User,
-                attributes: ['username']
+                model: User, 
+                attributes: ['username'],
             }
-        ]
+        ],
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -36,7 +37,7 @@ router.get('/:id', (req, res) => {
             'id', 
             'post_content', 
             'title', 
-            'created_at'
+            'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM attend WHERE post.id = attend.post_id)'), 'attend_count']
         ],
         include: [
@@ -44,7 +45,7 @@ router.get('/:id', (req, res) => {
                 model: User,
                 attributes: ['username']
             }
-        ]
+        ],
     })
         .then(dbPostData => {
             if (!dbPostData) {

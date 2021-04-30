@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
 // create our Post model
 class Post extends Model {
     static upattend(body, models) {
@@ -39,9 +40,12 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        post_content: {
-            type: DataTypes.TEXT,
-            allowNull: true
+        post_url: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isURL: true
+            }
         },
         user_id: {
             type: DataTypes.INTEGER,
