@@ -1,25 +1,33 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Attend } = require('../../models');
+const { Post, User, Attend, Comment } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
-            'id', 
-            'post_content', 
-            'title', 
+            'id',
+            'post_content',
+            'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM attend WHERE post.id = attend.post_id)'), 'attend_count']
         ],
         order: [['created_at', 'DESC']],
         include:
-        [
-            {
-                model: User, 
-                attributes: ['username'],
-            }
-        ],
+            [
+                {
+                    model: Comment,
+                    attributes: ['id', 'comment_info', 'post_id', 'user_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
+                },
+                {
+                    model: User,
+                    attributes: ['username'],
+                }
+            ],
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
@@ -34,9 +42,9 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         },
         attributes: [
-            'id', 
-            'post_content', 
-            'title', 
+            'id',
+            'post_content',
+            'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM attend WHERE post.id = attend.post_id)'), 'attend_count']
         ],
