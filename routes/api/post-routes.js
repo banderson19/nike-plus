@@ -50,6 +50,14 @@ router.get('/:id', (req, res) => {
         ],
         include: [
             {
+                model: Comment,
+                attributes: ['id', 'comment_info', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
                 model: User,
                 attributes: ['username']
             }
@@ -84,7 +92,7 @@ router.post('/', (req, res) => {
 // PUT /api/posts/upattend
 router.put('/upattend', (req, res) => {
     // custom static method created in models/Post.js
-    Post.upattend(req.body, { Attend })
+    Post.upattend(req.body, { Attend, Comment, User })
         .then(updatedPostData => res.json(updatedPostData))
         .catch(err => {
             console.log(err);
