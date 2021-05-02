@@ -4,6 +4,7 @@ const { Post, User, Comment, Attend } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
+    console.log(req.session);
     Post.findAll({
         attributes: [
             'id',
