@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Attend, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
@@ -76,7 +77,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         post_content: req.body.post_content,
@@ -90,7 +91,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/posts/upattend
-router.put('/upattend', (req, res) => {
+router.put('/upattend', withAuth, (req, res) => {
     // custom static method created in models/Post.js
     if (req.session) {
         Post.upattend({ ...req.body, user_id: req.session.user_id }, { Attend, Comment, User })
@@ -102,7 +103,7 @@ router.put('/upattend', (req, res) => {
     }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
@@ -127,7 +128,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
             id: req.params.id
