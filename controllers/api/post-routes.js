@@ -92,12 +92,14 @@ router.post('/', (req, res) => {
 // PUT /api/posts/upattend
 router.put('/upattend', (req, res) => {
     // custom static method created in models/Post.js
-    Post.upattend(req.body, { Attend, Comment, User })
-        .then(updatedPostData => res.json(updatedPostData))
-        .catch(err => {
-            console.log(err);
-            res.status(400).json(err);
-        });
+    if (req.session) {
+        Post.upattend({ ...req.body, user_id: req.session.user_id }, { Attend, Comment, User })
+            .then(updatedAttendData => res.json(updatedAttendData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            });
+    }
 });
 
 router.put('/:id', (req, res) => {

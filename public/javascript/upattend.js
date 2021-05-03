@@ -5,7 +5,21 @@ async function upattendClickHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    console.log(id);
+    const response = await fetch('/api/posts/upattend', {
+        method: 'PUT',
+        body: JSON.stringify({
+            post_id: id
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if(response.ok) {
+        document.location.reload();
+    } else {
+        alert(response.statusText);
+    }
 }
 
 document.querySelector('.upattend-btn').addEventListener('click', upattendClickHandler);
