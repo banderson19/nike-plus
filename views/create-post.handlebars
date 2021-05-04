@@ -1,0 +1,25 @@
+<section>
+    <a href="/dashboard" class="is-pulled-right"> &larr; back to dashboard</a>
+    <h2 class="is-size-4 has-text-weight-semibold">Create New Blog Post</h2>
+    <hr>
+
+    <form class="new-post-form">
+        <div>
+            <label for="post-title">
+                Trail:
+            </label>
+            <input class="input" type="text" id="post-title" name="post-title" />
+        </div>
+        <div>
+            <label for="post-content">
+                @Time:
+            </label>
+            <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
+        </div>
+        <button type="submit" class="button is-info is-pulled-right has-text-black">
+            Create Activity
+        </button>
+    </form>
+</section>
+
+<script src="/javascript/add-post.js"></script>
