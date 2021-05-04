@@ -1,12 +1,12 @@
 <div class="mb-5 pt-3">
     <a href="/dashboard/create/">
         <button id="create-post">
-            Create Post
+            Create Activity
         </button>
     </a>
 
     <h4>
-        Posts You've Created
+        Activities You've Created
     </h4>
     <hr>
     {{#if posts.length}}
@@ -17,7 +17,7 @@
 
 <a href="/dashboard/edit/{{post.id}}">
     <button>
-        Edit Post
+        Edit Activity
     </button>
 </a>
 </div>
@@ -25,7 +25,7 @@
 
 {{else}}
 <h6>
-    No posts have been created
+    No activities created
 </h6>
 
 {{/if}}
