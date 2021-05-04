@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 3001;
 // Sets Handlebars as the default template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-// Handlebars.registerPartial('myPartial', '{{prefix}}');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
