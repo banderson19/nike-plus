@@ -21,8 +21,7 @@
             <a href="/dashboard" class="navbar-item is-hoverable pt-1">Dashboard</a>
             <button id="logout" class="button is-danger has-text-black">Logout</button>
             {{else}}
-            <a href="/" class="navbar-item is-hoverable pt-1">Homepage</a>
-            <a href="/login" class="button is-info has-text-black">Login</a>
+            <a href="/login" class="navbar-item is-hoverable pt-1">Login</a>
             {{/if}}
         </nav>
     </header>
@@ -30,8 +29,10 @@
     <main>
         {{{ body }}}
     </main>
-    <footer>
-        ! Made By Group 6 !
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered">
+            Made By Group 6
+        </div>
     </footer>
 </div>
 
