@@ -12,7 +12,6 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 * [Installation](#installation)
 * [Usage](#usage)
 * [Technology](#technology)
-* [Questions](#questions)
 * [Screenshot](#Screenshot)
 
 ## Installation:
@@ -37,5 +36,3 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 - MVC
 
 ## Screenshot:
-![img](Assets/landingpage.png)
-![img2](Assets/11-express-homework-demo-01.png)
