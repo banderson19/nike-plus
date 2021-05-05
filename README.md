@@ -12,6 +12,7 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 * [Installation](#installation)
 * [Usage](#usage)
 * [Technology](#technology)
+* [Contributors] (#contributors)
 * [Screenshot](#Screenshot)
 
 ## Installation:
@@ -34,5 +35,8 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 - Heroku
 - Schema
 - MVC
+
+## Contributors:
+Tess, Brad, Gage & Nick
 
 ## Screenshot:
