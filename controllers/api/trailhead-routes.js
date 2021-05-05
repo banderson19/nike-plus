@@ -2,12 +2,9 @@ const router = require('express').Router();
 const { Trailhead } = require('../../models');
 const sequelize = require('../../config/connection');
 
-
-  
-
 // GET /api/trailhead
 router.get('/', (req, res) => {
-    console.log('hellollllo')
+    console.log('hello')
     Trailhead.findAll({})
     .then(dbTrailheadData => res.json(dbTrailheadData))
     .catch(err => {

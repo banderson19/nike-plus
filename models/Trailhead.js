@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Trailhead extends Model {}
+class Trailhead extends Model { }
 
 Trailhead.init(
   {
@@ -23,7 +23,7 @@ Trailhead.init(
         allowNull: false
     },
     dog_friendly: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.TINYINT
     }
   },
   {
@@ -33,5 +33,6 @@ Trailhead.init(
     modelName: 'trailhead'
   }
 );
+
 
 module.exports = Trailhead;
