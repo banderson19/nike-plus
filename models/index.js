@@ -3,7 +3,6 @@ const Post = require('./Post');
 const User = require('./User');
 const Attend = require('./Attend');
 const Comment = require('./Comment');
-const Trailhead = require('./Trailhead')
 
 // create associations
 User.hasMany(Post, {
@@ -57,4 +56,4 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 
-module.exports = { User, Post, Attend, Comment, Trailhead };
+module.exports = { User, Post, Attend, Comment };
