@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS nike_pro_db;
+
+CREATE DATABASE nike_pro_db;
