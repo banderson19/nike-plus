@@ -58,23 +58,3 @@ async function initMap() {
         }
     }
 }
-// for (var i = 0; i < markers.length; i++) {
-//     // add marker
-//     addMarker(markers[i])
-// }
-
-// var markers = [
-    //     {
-        //         coords: {lat: 40.70700, lng: -111.7592},
-        //         iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-        //         content: '<h1> Granduer Peak</h1>'
-        //     },
-        //     {
-            //         coords: {lat: 40.7976, lng: -111.8537},
-            //         content: '<h1> Bobsled</h1>'
-                            //     },
-                            //     {
-                            //         coords: {lat: 40.5059, lng: -111.8454},
-                            //         content: '<h1> Corner Canyon </h1>'
-                            //     }
-                            // ]
