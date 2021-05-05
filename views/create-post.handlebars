@@ -12,10 +12,26 @@
             <input class="input" type="text" id="post-title" name="post-title" />
         </div>
         <div>
-            <label for="post-content">
-                Canyon, Time & Activity:
+            <label for="post-canyon">
+                Canyon:
             </label>
-            <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
+            <input class="input" name="post-canyon" type="text" value="{{post.post_content}}" />
+
+            <label for="post-time">
+                Time:
+            </label>
+            <input class="input" name="post-time" type="time" value="{{post.post_content}}" />
+
+            <label for="post-date">
+                Date:
+            </label>
+            <input class="input" name="post-date" type="date" value="{{post.post_content}}" />
+
+            <label for="post-activity">
+                Activity:
+            </label>
+            <input class="input" name="post-activity" type="text" value="{{post.post_content}}" />
+
         </div>
         <button type="submit" class="button is-info is-pulled-right has-text-black">
             Create Activity

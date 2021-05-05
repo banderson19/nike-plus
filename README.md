@@ -36,7 +36,7 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 - connect-session-sequelize
 
 ## Usage:
-- Heroku URL placed here
+- https://secret-oasis-75633.herokuapp.com/
 
 ## Technology:
 - Express.js
