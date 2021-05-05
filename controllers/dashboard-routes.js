@@ -4,7 +4,6 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    console.log(req.session.user_id);
     Post.findAll({
         where: {
             user_id: req.session.user_id
@@ -110,7 +109,6 @@ router.get('/create/', withAuth, (req, res) => {
             res.render('create-post', { posts, loggedOn: true });
         })
         .catch(err => {
-            console.log(err);
             res.status(500).json(err);
         });
 });
