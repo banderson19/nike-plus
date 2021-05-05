@@ -9,8 +9,9 @@
         Activities You've Created
     </h4>
     <hr>
-    {{#if posts.length}}
+    
 </div>
+{{#if posts.length}}
 
 {{#each posts as |post|}}
 {{> post-display post}}
@@ -20,7 +21,7 @@
         Edit Activity
     </button>
 </a>
-</div>
+
 {{/each}}
 
 {{else}}
