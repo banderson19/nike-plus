@@ -32,14 +32,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+
+  res.render('map');
+});
 
 // turn on routes
 app.use(require('./controllers/'));
 
-// app.get('/', (req, res) => {
-
-//   res.render('map');
-// });
 
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
