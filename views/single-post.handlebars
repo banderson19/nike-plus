@@ -1,0 +1,25 @@
+{{> post-display post}}
+
+{{#if loggedOn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">
+            Add Comment
+        </button>
+        <button type="button" class="upattend-btn">
+            Attend
+        </button>
+    </div>
+</form>
+{{/if}}
+
+{{> text post.comments}}
+
+{{#if loggedOn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upattend.js"></script>
+{{/if}}
