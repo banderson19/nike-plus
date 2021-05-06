@@ -1,0 +1,34 @@
+{{>map }}
+
+<div class="mb-5 pt-3">
+    <a href="/dashboard/create/">
+        <button id="create-post">
+            Create Activity
+        </button>
+    </a>
+
+    <h4>
+        Activities You've Created
+    </h4>
+    <hr>
+    
+</div>
+{{#if posts.length}}
+
+{{#each posts as |post|}}
+{{> post-display post}}
+
+<a href="/dashboard/edit/{{post.id}}">
+    <button>
+        Edit Activity
+    </button>
+</a>
+
+{{/each}}
+
+{{else}}
+<h6>
+    No activities created
+</h6>
+
+{{/if}}

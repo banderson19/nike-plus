@@ -1,11 +1,43 @@
-# nike-plus
+# NIKE PLUS
 
-## Project Proposal 
+## Description:
 
-An app where outdoorsy folks can get together and plan an activity such as hiking, trail running, and mtn biking. 
+An app where outdoorsy folks can get together and plan an activity such as hiking, trail running, and mtn biking. User will need to sign in to contribute to the app.User can create a post with a trailhead and put a time for a meet up. User will be able to join others activities by clicking the going button. User will able to comment on activity posts. User will be able to edit and delete their own posts. 
 
-## MVP 
+## Licensing:
+[![License](https://img.shields.io/badge/License-isc-blue.svg)](https://shields.io)
 
-Working app where user will sign in. user can click on a trailhead and put time for meet up. User will be able to join others activities by clicking the going button. user will able to comment on activity posts. User will be able to edit and delete their posts.
+## Table of Contents 
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Technology](#technology)
+* [Contributors](#contributors)
+* [Screenshot](#Screenshot)
 
+## Installation:
+- MySQL2
+- express-handlebars
+- sequelize
+- dotenv
+- bcrypt
+- express-session
+- connect-session-sequelize
+
+## Usage:
+- https://secret-oasis-75633.herokuapp.com/
+
+## Technology:
+- Express.js
+- Node.js
+- Handlebars
+- Javascript
+- Heroku
+- Schema
+- MVC
+
+## Contributors:
+Tess, Brad, Gage & Nick
+
+## Screenshot:
  <img src="flowchart.png" alt="flow of application">
