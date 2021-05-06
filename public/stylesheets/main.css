@@ -1,0 +1,24 @@
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.navigation {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar{
+
+    display: inline-block;
+        margin: 0 30px;
+        font-weight: lighter;
+        font-size: 22px;
+        color: black;
+    
+}

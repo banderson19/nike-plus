@@ -1,0 +1,12 @@
+.new-post-form { 
+    border: 3px solid black;
+    background-color: rgb(255, 123, 0);
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    color: black;
+    align-content: center;
+    box-sizing:inherit;
+    
+
+}
