@@ -14,6 +14,7 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 * [Technology](#technology)
 * [Contributors](#contributors)
 * [Screenshot](#Screenshot)
+* [Flowchart](#flowchart)
 
 ## Installation:
 - MySQL2
@@ -40,4 +41,6 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 Tess, Brad, Gage & Nick
 
 ## Screenshot:
- <img src="flowchart.png" alt="flow of application">
+
+## Flowchart
+ <img src="public/images/flowchart.png" alt="flow of application">
