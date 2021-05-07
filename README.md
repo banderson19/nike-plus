@@ -42,5 +42,7 @@ Tess, Brad, Gage & Nick
 
 ## Screenshot:
 
-## Flowchart
+<img src="public/images/nikeproshot.png" >
+
+## Flowchart:
  <img src="public/images/flowchart.png" alt="flow of application">
