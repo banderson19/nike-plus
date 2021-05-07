@@ -38,7 +38,7 @@ An app where outdoorsy folks can get together and plan an activity such as hikin
 - MVC
 
 ## Contributors:
-Tess, Brad, Gage & Nick
+Tess, Brad & Gage 
 
 ## Screenshot:
 
