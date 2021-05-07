@@ -44,12 +44,20 @@ async function initMap() {
             map: map,
         })
         console.log('111', props.trailName)
+        if(props.dog_friendly == 1) {
+            props.dog_friendly = 'Pet Friendly :))' 
+        } else {
+            props.dog_friendly = 'Not Pet Friendly :('
+        }
         //Check content
         if (props.trailName) {
             var infoWindow = new google.maps.InfoWindow({
-                content: `<h1>${props.trailName}</h1>`
-            })
-            
+                content: `<h1> Trail name: ${props.trailName}</h1>`+
+                        `<h2>${props.dog_friendly}</h2>`+
+                        `<a href= "/dashboard/create/"> <button> create activity </button> </a>`
+                        
+            });
+           
             marker.addListener('click', function () {
                 console.log('hit')
                 infoWindow.open(map, marker)
