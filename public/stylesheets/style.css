@@ -1,15 +1,18 @@
-:root {
-    --primary: white;
-    --secondary: grey;
-  
-   
-  
-}
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
 
 .new-post-form { 
     border: 3px solid black;
@@ -35,45 +38,26 @@ body{
     
 }
 
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
+
 
 header{
     color: black;
     font-weight: bold;
     font-size: 30px;
 }
-.nav-bar{
-
+.navbar{
     display: inline-block;
     font-size: 22px;
     color: black;
      padding: 10px;
      text-decoration: none;
-    
+     background-color: rgb(194, 184, 184);
 }
 
 header nav{
     float: right; 
-}
-
-.signup-form {
-    border: 3px solid black;
-    background-color: rgb(255, 123, 0);
-    padding: 20px;
-    width: 500px;
-    height: 500px;
+    text-decoration: none;
     color: black;
-    align-content: center;
-    box-sizing:inherit;
-    
-
 }
 
 .activities{
@@ -87,41 +71,14 @@ header nav{
 
 }
 
-body{
-    font-family:'Times New Roman', Times, serif;
-    color: black;
-    background-color: rgb(194, 184, 184);
-    width: 100%;
-    height: 100%;
-    
-}
+.activityform{
 
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    border: 1px solid black;
+    color: black;
     padding: 50px;
-}
-
-header{
-    color: black;
-    font-weight: bold;
-    font-size: 40px;
-}
-.nav-bar{
-
-    display: inline-block;
-        margin: 0 30px;
-        font-weight: lighter;
-        font-size: 22px;
-        color: black;
-    
-}
-
-header nav{
-    float: right; 
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 .signup-form {
@@ -134,54 +91,7 @@ header nav{
     align-content: center;
     box-sizing:inherit;
     
-
 }    
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
-
-body{
-    background-color: gray;
-    
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body{
-    font-family:'Times New Roman', Times, serif;
-    color: black;
-    background-color: rgb(194, 184, 184);
-    width: 100%;
-    height: 100%;
-    
-}
-
-header{
-    color: black;
-    font-weight: bold;
-    font-size: 30px;
-}
-.nav-bar{
-
-    display: inline-block;
-        margin: 0 30px;
-        font-weight: lighter;
-        font-size: 22px;
-        color: black;
-    
-}
-
-header nav{
-    float: right; 
-}
 
 .login-form {
     border: 3px solid black;
@@ -216,46 +126,6 @@ form div {
     
 }
 
-body{
-    font-family:'Times New Roman', Times, serif;
-    color: black;
-    background-color: rgb(194, 184, 184);
-    width: 100%;
-    height: 100%;
-    
-}
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
-
-header{
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 30px;
-}
-.nav-bar{
-
-    display: inline-block;
-        margin: 0 30px;
-        font-weight: lighter;
-        font-size: 22px;
-        color: black;
-    
-}
-
-header nav{
-    float: right; 
-    text-decoration: none;
-    color: black;
-}
-
 .login-form {
     border: 3px solid black;
     background-color: rgb(255, 123, 0);
@@ -265,87 +135,10 @@ header nav{
     color: black;
     align-content: center;
     box-sizing:inherit;
-    
-
-}
-
-form div {
-    border: 1px solid black;
-    display:block;
-    padding: 7px 7px;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-    width: 100%;
-    margin-bottom: 35px;
-    margin-top: 35px;
-    
-}
-   
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
-
-.navigation {
-    text-decoration: none;
-    color: black;
-}
-
-.nav-bar{
-
-    display: inline-block;
-        margin: 0 30px;
-        font-weight: lighter;
-        font-size: 22px;
-        color: black;
-    
-}
-
-body{
-    font-family:'Times New Roman', Times, serif;
-    color: black;
-    background-color: rgb(194, 184, 184);
-    width: 100%;
-    height: 100%;
-    
-}
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
-
-header{
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-    font-size: 30px;
-}
-.nav-bar{
-
-    display: inline-block;
-        margin: 0 30px;
-        font-weight: lighter;
-        font-size: 22px;
-        color: black;
-    
-}
-
-header nav{
-    float: right; 
 }
 
 .signup-form {
+    flex-wrap: wrap;
     border: 3px solid black;
     background-color: rgb(255, 123, 0);
     padding: 20px;
@@ -359,14 +152,14 @@ header nav{
 
 .post-list {
 border:3px solid black;
-background-color: rgb(255, 123, 0);
 padding: 20px;
-width: 500px;
-height: 500px;
+margin: 50px;
 color: black;
 align-content: center;
 box-sizing:inherit;
-font-weight: bold;}
+font-weight: bold;
+text-decoration: underline;
+}
 
 
 form div {
@@ -382,22 +175,57 @@ form div {
     
 }
 
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-header{
+a {
     color: black;
-    background-color: yellow;
-    font-weight: bold;
 }
 
-footer {
+
+.footer {
     background-color: rgb(194, 184, 184);
     width: 100%;
     text-align: center;
 }
+
+@media screen and (max-width:980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+    }
+
+    .navbar {
+        align-items: center;
+        display: flex;
+    }
+
+    .signup-form{
+        align-items: center;
+        display: flex;
+    }
+    
+    .login-form{
+        align-items: center;
+        display: flex;
+    }
+
+    .post-list{
+        align-items: center;
+        display: flex;
+    }
+
+    .home-info{
+        align-items: center;
+        display: flex;
+    }
+
+    .activities{
+        align-items: center;
+        display: flex;
+    }
+
+    footer  {
+      text-align: center;
+      width: 100%
+    }
+
+  }
