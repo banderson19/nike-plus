@@ -53,7 +53,7 @@ async function initMap() {
         if (props.trailName) {
             var infoWindow = new google.maps.InfoWindow({
                 content: `<h1> Trail name: ${props.trailName}</h1>`+
-                        `<h2>${props.dog_friendly}</h2>`+
+                        `<h2>${props.dog_friendly}</h2>`+   ``
                         `<a href= "/dashboard/create/"> <button> create activity </button> </a>`
                         
             });
