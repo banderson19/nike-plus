@@ -20,8 +20,10 @@ async function initMap() {
             .then(res => res.json())
             .then(json => {
                 markers.push(json)
+                console.log('11', markers)
             })
     }
+
     console.log(markers[0])
     // Loop through markers
     markers[0].map( e => {
@@ -53,9 +55,7 @@ async function initMap() {
         if (props.trailName) {
             var infoWindow = new google.maps.InfoWindow({
                 content: `<h1> Trail name: ${props.trailName}</h1>`+
-                        `<h2>${props.dog_friendly}</h2>`+   ``
-                        `<a href= "/dashboard/create/"> <button> create activity </button> </a>`
-                        
+                        `<h2>${props.dog_friendly}</h2>`
             });
            
             marker.addListener('click', function () {
